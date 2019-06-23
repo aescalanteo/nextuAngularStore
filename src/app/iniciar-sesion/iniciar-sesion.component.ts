@@ -14,6 +14,7 @@ export class IniciarSesionComponent implements OnInit {
   constructor(private dataService: DataService, private _router: Router) { }
 
   ngOnInit() {
+    document.body.classList.remove("bg-main");
     document.body.classList.add("bg-login");
     this.dataService.getUsers();
   }
